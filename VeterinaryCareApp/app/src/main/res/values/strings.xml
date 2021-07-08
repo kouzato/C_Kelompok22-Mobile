@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Veterinary Care App</string>
+    <string name="welcomr_string">Welcome to Veterinary Care</string>
+    <string name="main_button">login</string>
+    <string name="main_email_hint">Email</string>
+    <string name="main_password_hint">Password</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Nama</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="sub_password_hint">Confirm Password</string>
+    <string name="register">Belum Punya Akun? Register</string>
+</resources>
