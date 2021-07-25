@@ -3,14 +3,26 @@ package com.kelompok22.veterinarycareapp.model;
 import com.google.gson.annotations.SerializedName;
 
 public class KeluhanResponse {
-    @SerializedName("keluhan")
+
+    @SerializedName("user")
     private KeluhanModel keluhanModel;
 
-    public KeluhanModel getKeluhanModel() {
+    @SerializedName("token")
+    private String token;
+
+    public void setKeluhanModel(KeluhanModel keluhanModel){
+        this.keluhanModel = keluhanModel;
+    }
+
+    public KeluhanModel getKeluhanModel(){
         return keluhanModel;
     }
 
-    public void setKeluhanModel(KeluhanModel keluhanModel) {
-        this.keluhanModel = keluhanModel;
+    public void setToken(String token){
+        this.token = token;
+    }
+
+    public String getToken(){
+        return token;
     }
 }

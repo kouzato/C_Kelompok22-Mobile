@@ -44,7 +44,7 @@
             android:text="Name"
             />
         <Button
-            android:id="@+id/detailp"
+            android:id="@+id/listDokter"
             android:layout_width="327dp"
             android:layout_height="45dp"
             android:background="@drawable/rounded_background"
@@ -52,7 +52,7 @@
             android:layout_marginRight="42dp"
             android:layout_marginLeft="42dp"
             android:textColor="@color/background"
-            android:text="DETAIL PROFILE"
+            android:text="List Dokter"
             />
         <Button
             android:layout_width="327dp"

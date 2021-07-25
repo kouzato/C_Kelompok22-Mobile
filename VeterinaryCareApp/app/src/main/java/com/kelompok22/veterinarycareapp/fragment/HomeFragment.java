@@ -11,12 +11,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.kelompok22.veterinarycareapp.ListDokterActivity;
 import com.kelompok22.veterinarycareapp.LoginActivity;
 import com.kelompok22.veterinarycareapp.MainActivity;
 import com.kelompok22.veterinarycareapp.MapsActivity;
 import com.kelompok22.veterinarycareapp.R;
 import com.kelompok22.veterinarycareapp.TentangKami;
 import com.kelompok22.veterinarycareapp.model.SessionManager;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -83,7 +86,15 @@ public class HomeFragment extends Fragment {
         lokasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity().getApplicationContext(), MapsActivity.class); //belum diganti
+                Intent intent = new Intent(getActivity().getApplicationContext(), MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button ListDokter = view.findViewById(R.id.listDokter);
+        ListDokter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), ListDokterActivity.class);
                 startActivity(intent);
             }
         });

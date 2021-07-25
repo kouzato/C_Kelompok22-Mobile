@@ -3,6 +3,7 @@ package com.kelompok22.veterinarycareapp.API;
 import com.kelompok22.veterinarycareapp.model.Keluhan;
 import com.kelompok22.veterinarycareapp.model.KeluhanResponse;
 import com.kelompok22.veterinarycareapp.model.ListDokter;
+import com.kelompok22.veterinarycareapp.model.ListDokterResponse;
 import com.kelompok22.veterinarycareapp.model.ListKeluhanResponse;
 import com.kelompok22.veterinarycareapp.model.Login;
 import com.kelompok22.veterinarycareapp.model.Register;
@@ -50,17 +51,16 @@ public interface APIRequestData {
             @Query("query") String query
     );
     @Headers({"Accept: application/json"})
-    @POST("profile3")
+    @POST("profile2")
     Call<KeluhanResponse> Keluhan(
-            @Header("Authorization") String token,
             @Query("nama") String nama,
             @Query("email") String email,
-            @Query("isi") String isi,
-            @Query("foto") MultipartBody.Part partImage);
+            @Query("isi") String isi);
 
 
-    @GET("listdokter")
-    Call<ListDokter> listdokter();
+    @Headers({"Accept: application/json"})
+    @GET("listdokter2")
+    Call<ListDokterResponse> listdokter();
 
     @GET("profile3")
     Call<ListKeluhanResponse> ardListKeluhan(@Header("Authorization") String token);

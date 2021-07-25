@@ -1,19 +1,20 @@
 package com.kelompok22.veterinarycareapp.model;
 
 import com.android.volley.toolbox.StringRequest;
+import com.google.gson.annotations.SerializedName;
 
 public class KeluhanModel {
+    @SerializedName("id")
     private int id;
-    private String nama,email,isi,foto;
 
-    public KeluhanModel(int id, String nama, String email, String isi, String foto) {
-        this.id = id;
-        this.nama = nama;
-        this.email = email;
-        this.isi = isi;
-        this.foto = foto;
+    @SerializedName("nama")
+    private String nama;
 
-    }
+    @SerializedName("email")
+    private String email;
+
+    @SerializedName("isi")
+    private String isi;
 
     public int getId() {
         return id;
@@ -47,12 +48,5 @@ public class KeluhanModel {
         this.isi = isi;
     }
 
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
 
 }

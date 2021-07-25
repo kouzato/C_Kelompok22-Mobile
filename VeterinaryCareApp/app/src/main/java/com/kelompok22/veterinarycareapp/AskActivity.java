@@ -112,22 +112,22 @@ public class AskActivity extends AppCompatActivity {
         konfirmasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                File imageFile = new File(part_image);
-                RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-file"), imageFile);
-                MultipartBody.Part partImage = MultipartBody.Part.createFormData("file", imageFile.getName(), requestBody);
+//                File imageFile = new File(part_image);
+//                RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-file"), imageFile);
+//                MultipartBody.Part partImage = MultipartBody.Part.createFormData("file", imageFile.getName(), requestBody);
 
                 apiInterface = RetroServer.konekRetrofit().create(APIRequestData.class);
                 Log.d("TAG", "onMasukClick: " + nama.getText().toString());
                 Log.d("TAG", "onMasukClick: " + email.getText().toString());
                 Log.d("TAG", "onMasukClick: " + isi.getText().toString());
-                Log.d("TAG", "onMasukClick: " + imageFile.getName());
-                Call<KeluhanResponse> keluhanResponseCall = apiInterface.Keluhan("Bearer " + token,nama.getText().toString(), email.getText().toString(), isi.getText().toString(), partImage);
+//                Log.d("TAG", "onMasukClick: " + imageFile.getName());
+                Call<KeluhanResponse> keluhanResponseCall = apiInterface.Keluhan(nama.getText().toString(), email.getText().toString(), isi.getText().toString());
                 keluhanResponseCall.enqueue(new Callback<KeluhanResponse>() {
                     @Override
                     public void onResponse(Call<KeluhanResponse> call, Response<KeluhanResponse> response) {
                         if (response.isSuccessful()) {
-                            Toast.makeText(AskActivity.this, "Register Berhasil", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(AskActivity.this, LoginActivity.class));
+                            Toast.makeText(AskActivity.this, "Berhasil Mengirim Keluhan", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(AskActivity.this, MainActivity.class));
                             finish();
                         } else {
                             Toast.makeText(AskActivity.this, "Gagal", Toast.LENGTH_SHORT).show();

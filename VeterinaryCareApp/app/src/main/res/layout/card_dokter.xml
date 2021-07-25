@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="160dp"
+        android:visibility="gone"
+        android:textSize="16sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:background="@drawable/bg_list"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="15dp">
+
+
+
+        <TextView
+            android:id="@+id/Nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:layout_below="@+id/gambar"
+            android:layout_marginLeft="30dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/background"
+            />
+
+        <TextView
+            android:id="@+id/spesialis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spesialis"
+            android:layout_below="@+id/gambar"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/usernameDok"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/judul"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="45dp"
+            android:maxLines="10"
+            android:text="username"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/Alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Alamat"
+            android:textSize="11sp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/ac_tempat"
+            android:maxLines="10"
+            />
+
+        <TextView
+            android:id="@+id/emailDok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gambar"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="40dp"
+            android:text="Email"
+
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/NoTelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gambar"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="55dp"
+            android:text="NoTelp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
