@@ -3,12 +3,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".fragment.HomeFragment"
+    android:background="@color/background">
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/tittle"/>
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="573dp"
+
+        android:layout_marginTop="158dp">
+
+        <Button
+            android:id="@+id/LogOut"
+            android:layout_width="327dp"
+            android:layout_height="45dp"
+            android:background="@drawable/rounded_background"
+            android:layout_marginTop="452dp"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="42dp"
+            android:textColor="@color/background"
+            android:text="LOGOUT"/>
+
+        <TextView
+            android:id="@+id/etMainName"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:layout_width="327dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="77dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginLeft="42dp"
+            android:text="Name"
+            />
+        <Button
+            android:id="@+id/detailp"
+            android:layout_width="327dp"
+            android:layout_height="45dp"
+            android:background="@drawable/rounded_background"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginLeft="42dp"
+            android:textColor="@color/background"
+            android:text="DETAIL PROFILE"
+            />
+        <Button
+            android:layout_width="327dp"
+            android:layout_height="45dp"
+            android:background="@drawable/rounded_background"
+            android:layout_marginTop="225dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginLeft="42dp"
+            android:textColor="@color/background"
+            android:text="TENTANG"
+            android:id="@+id/tentang"/>
+        <Button
+            android:id="@+id/lokasi"
+            android:layout_width="327dp"
+            android:layout_height="45dp"
+            android:background="@drawable/rounded_background"
+            android:layout_marginTop="300dp"
+            android:layout_marginRight="42dp"
+
+            android:layout_marginLeft="42dp"
+            android:textColor="@color/background"
+            android:text="Lokasi Pet shop"/>
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/user"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp"
+        android:layout_marginRight="143dp"
+        android:layout_marginLeft="143dp"
+        android:layout_gravity="center_horizontal"/>
+
 
 </FrameLayout>

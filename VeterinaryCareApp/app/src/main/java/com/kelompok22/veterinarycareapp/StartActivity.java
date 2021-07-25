@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.kelompok22.veterinarycareapp.model.Login;
+
 public class StartActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +20,7 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                Intent intent = new Intent(StartActivity.this,MainActivity.class);
+                Intent intent = new Intent(StartActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

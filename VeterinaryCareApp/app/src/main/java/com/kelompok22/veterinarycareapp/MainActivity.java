@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.kelompok22.veterinarycareapp.fragment.ArticleFragment;
+import com.kelompok22.veterinarycareapp.fragment.AskFragment;
+import com.kelompok22.veterinarycareapp.fragment.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
     MeowBottomNavigation bottomNavigation;
@@ -50,27 +53,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //set notifikasi count
-        bottomNavigation.setCount(1,"10");
+//        bottomNavigation.setCount(1,"10");
         //set home fragmen initially selected
         bottomNavigation.show(2,true);
 
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
-                //display toast
-                Toast.makeText(getApplicationContext()
-                        , "you Clciked " + item.getId()
-                        , Toast.LENGTH_SHORT).show();
+
             }
         });
 
         bottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
             @Override
             public void onReselectItem(MeowBottomNavigation.Model item) {
-                //display toast
-                Toast.makeText(getApplicationContext()
-                        , "you Clciked " + item.getId()
-                        , Toast.LENGTH_SHORT).show();
+
             }
         });
     }

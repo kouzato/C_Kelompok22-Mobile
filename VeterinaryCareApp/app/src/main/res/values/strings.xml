@@ -20,4 +20,5 @@
     <string name="email">Email</string>
     <string name="sub_password_hint">Confirm Password</string>
     <string name="register">Belum Punya Akun? Register</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
