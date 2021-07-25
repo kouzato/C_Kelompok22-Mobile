@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".TentangKami">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="273dp"
+            android:layout_height="200dp"
+            android:src="@drawable/vetcare" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        >
+
+
+        <ScrollView
+            android:layout_width="348dp"
+            android:layout_height="323dp"
+            android:layout_gravity="center"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+
+                android:text="Perkembangan kemajuan teknologi menjadi salah satu alasan utama kami untuk menjadikan VeterinaryCare sebagai satu-satunya aplikasi resmi kami dalam melayani setiap customer secara online. Di dalam pelayanan, kami selalu berusaha untuk bisa melayani kebutuhan anda dalam memenuhi segala macam kebutuhan yang anda perlukan untuk hewan peliharaan anda. Kami juga selalu siap memberikan informasi secara maksimal serta selalu menyediakan produk-produk yang terbaik di setiap kelasnya dengan aneka macam pilihan varian.
+Visi utama kami adalah untuk bisa mejadi pilihan utama anda dalam memenuhi segala macam hewan peliharaan anda, baik itu untuk perseorangan, ataupun lembaga swasta atau  negeri. Besar harapan kami kedepan yaitu untuk dapat terus maju dan berkembang dalam melayani kebutuhan anda agar tetap sehat dan terawat dengan baik.
+"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="607dp"
+        android:gravity="center"
+        android:text="V 1.0.0"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background"
+            android:text="Kembali"
+            android:onClick="onClick"
+            android:textAllCaps="true"
+            android:textColor="@color/background" />
+    </LinearLayout>
+
+</RelativeLayout>
