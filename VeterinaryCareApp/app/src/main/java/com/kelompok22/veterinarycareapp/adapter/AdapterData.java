@@ -50,8 +50,8 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
             String url = "https://wsjti.id/veterinarycare/public/img/" + dm.getFoto();
             Picasso.get()
                     .load(url)
-                    .placeholder(R.drawable.ic_launcher_background)
-                    .error(R.drawable.ic_launcher_background)
+                    .placeholder(R.drawable.ic_article)
+                    .error(R.drawable.ic_article)
                     .into(holder.Sampul);
             holder.List.setOnClickListener(new View.OnClickListener() {
                 @Override

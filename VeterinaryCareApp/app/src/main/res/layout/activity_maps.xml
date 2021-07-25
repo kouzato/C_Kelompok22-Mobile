@@ -39,16 +39,27 @@
     </RelativeLayout>
 
     <ImageView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/relLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="27dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rounded_background" />
+
+    <ImageView
         android:id="@+id/ic_gps"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_below="@id/relLayout1"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="531dp"
-        android:layout_marginRight="331dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="36dp"
         android:scaleType="centerCrop"
-        android:background="roun"
-        android:src="@drawable/ic_baseline_gps_fixed_24" />
+        android:src="@drawable/ic_baseline_gps_fixed_24"/>
+
+
 
     <Button
         android:id="@+id/onBackpressed"
