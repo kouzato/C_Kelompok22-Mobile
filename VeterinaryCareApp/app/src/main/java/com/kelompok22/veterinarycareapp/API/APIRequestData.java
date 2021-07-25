@@ -49,12 +49,13 @@ public interface APIRequestData {
     Call<ResponseModel> search(
             @Query("query") String query
     );
+    @Headers({"Accept: application/json"})
     @POST("profile3")
     Call<KeluhanResponse> Keluhan(
             @Query("nama") String nama,
             @Query("email") String email,
             @Query("isi") String isi,
-            @Query("foto") MultipartBody.Part foto);
+            @Query("foto") MultipartBody.Part partImage);
 
 
     @GET("listdokter")

@@ -120,6 +120,7 @@ public class AskActivity extends AppCompatActivity {
                 Log.d("TAG", "onMasukClick: " + nama.getText().toString());
                 Log.d("TAG", "onMasukClick: " + email.getText().toString());
                 Log.d("TAG", "onMasukClick: " + isi.getText().toString());
+                Log.d("TAG", "onMasukClick: " + partImage.toString());
                 Call<KeluhanResponse> keluhanResponseCall = apiInterface.Keluhan(nama.getText().toString(), email.getText().toString(), isi.getText().toString(), partImage);
                 keluhanResponseCall.enqueue(new Callback<KeluhanResponse>() {
                     @Override
@@ -160,8 +161,6 @@ public class AskActivity extends AppCompatActivity {
                 if (options[item].equals("Take Photo")) {
                     Intent m_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                     File file = new File(Environment.getExternalStorageDirectory(), "MyPhoto.jpg");
-                    Uri uri = FileProvider.getUriForFile(AskActivity.this, this.getClass().getPackage() + ".provider", file);
-                    m_intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, uri);
                     startActivityForResult(m_intent, 0);
 
                 } else if (options[item].equals("Choose from Gallery")) {
