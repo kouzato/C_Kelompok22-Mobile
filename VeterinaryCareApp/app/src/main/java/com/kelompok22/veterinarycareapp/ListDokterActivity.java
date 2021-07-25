@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,8 +58,6 @@ public class ListDokterActivity extends AppCompatActivity {
                 String pesan = response.body().getMessage();
                 listData = response.body().getData();
 
-                Toast.makeText(ListDokterActivity.this, "code : "+kode+" | message : "+pesan, Toast.LENGTH_SHORT).show();
-
                 adData = new ListDokterAdapter(ListDokterActivity.this, listData);
                 rvData.setAdapter(adData);
                 adData.notifyDataSetChanged();
@@ -69,5 +68,8 @@ public class ListDokterActivity extends AppCompatActivity {
                 Toast.makeText(ListDokterActivity.this, "Failed to Contact Server"+t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    public void onClickBack(View view) {
+        onBackPressed();
     }
 }

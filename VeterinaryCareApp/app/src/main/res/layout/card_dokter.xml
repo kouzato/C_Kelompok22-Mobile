@@ -14,8 +14,8 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="6dp"
+        android:layout_height="80dp"
+        android:padding="10dp"
         android:background="@drawable/bg_list"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
@@ -65,7 +65,7 @@
             android:id="@+id/Alamat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="59dp"
             android:text="Alamat"
             android:textSize="11sp"
             android:layout_marginLeft="30dp"

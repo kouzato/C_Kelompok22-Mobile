@@ -44,11 +44,25 @@
         android:layout_height="40dp"
         android:layout_below="@id/relLayout1"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginTop="531dp"
+        android:layout_marginRight="331dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_gps"
-        android:background="@color/white"/>
+        android:background="roun"
+        android:src="@drawable/ic_baseline_gps_fixed_24" />
+
+    <Button
+        android:id="@+id/onBackpressed"
+        android:layout_width="200dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_background"
+        android:text="Kembali"
+        android:onClick="onClickBack"
+        android:textColor="@color/background"
+        />
+
 
 
 </RelativeLayout>

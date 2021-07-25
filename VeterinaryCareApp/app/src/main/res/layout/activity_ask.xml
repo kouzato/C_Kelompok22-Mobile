@@ -36,7 +36,15 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginTop="60dp"
-                android:text="Khawatir dengan hewan peliharaan anda?                            Yuk tanyak"
+                android:text="Khawatir dengan hewan peliharaan anda?"
+                android:textColor="@color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="75dp"
+                android:text="Yuk Tanya"
                 android:textColor="@color/white" />
 
         </RelativeLayout>
@@ -154,7 +162,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="650dp"
+            android:layout_marginTop="590dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/rounded_background"
             android:text="Kirim"
@@ -163,5 +171,18 @@
             app:spinning_bar_color="#FFF"
             app:spinning_bar_padding="6dp"
             app:spinning_bar_width="4dp" />
+
+    <Button
+        android:id="@+id/onBackpressed"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_background"
+        android:text="Kembali"
+        android:onClick="onClickBack"
+        android:textColor="@color/background"
+        />
 
 </RelativeLayout>

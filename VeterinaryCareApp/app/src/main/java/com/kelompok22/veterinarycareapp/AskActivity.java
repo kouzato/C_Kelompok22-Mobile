@@ -227,4 +227,7 @@ public class AskActivity extends AppCompatActivity {
             }
         }
     }
+    public void onClickBack(View view) {
+        onBackPressed();
+    }
 }

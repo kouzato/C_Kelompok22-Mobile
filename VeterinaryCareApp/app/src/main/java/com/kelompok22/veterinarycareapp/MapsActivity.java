@@ -296,6 +296,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
+    public void onClickBack(View view) {
+        onBackPressed();
+    }
 
 }
 
