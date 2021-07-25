@@ -78,8 +78,8 @@ public class HomeFragment extends Fragment {
         etName = view.findViewById(R.id.etMainName);
         name = (String) sessionManager.getUserDetail().get(SessionManager.NAME);
         etName.setText(name);
-        logout = (Button) view.findViewById(R.id.LogOut);
-        Button lokasi = (Button) view.findViewById(R.id.lokasi);
+        logout = view.findViewById(R.id.LogOut);
+        Button lokasi = view.findViewById(R.id.lokasi);
         lokasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,7 +93,7 @@ public class HomeFragment extends Fragment {
                 logout();
             }
         });
-        Button tentang = (Button) view.findViewById(R.id.tentang);
+        Button tentang = view.findViewById(R.id.tentang);
         tentang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

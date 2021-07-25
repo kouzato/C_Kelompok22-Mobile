@@ -42,10 +42,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
 
         btnMovetoLogin = findViewById(R.id.login_button);
-        btnMovetoLogin.setOnClickListener((View.OnClickListener) this);
+        btnMovetoLogin.setOnClickListener(this);
 
         btnRegister = findViewById(R.id.register_button);
-        btnRegister.setOnClickListener((View.OnClickListener) this);
+        btnRegister.setOnClickListener(this);
 
 
     }

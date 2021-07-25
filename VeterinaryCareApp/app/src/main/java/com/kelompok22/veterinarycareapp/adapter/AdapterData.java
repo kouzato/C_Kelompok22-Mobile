@@ -25,8 +25,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
-    private Context ctx;
-    private List<DataModel> listArtikel;
+    private final Context ctx;
+    private final List<DataModel> listArtikel;
 
     public AdapterData(Context ctx, List<DataModel> listArtikel){
         this.ctx = ctx;

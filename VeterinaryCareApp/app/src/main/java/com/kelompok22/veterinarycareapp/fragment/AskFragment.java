@@ -1,25 +1,42 @@
 package com.kelompok22.veterinarycareapp.fragment;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kelompok22.veterinarycareapp.API.APIRequestData;
 import com.kelompok22.veterinarycareapp.API.RetroServer;
+import com.kelompok22.veterinarycareapp.AskActivity;
+import com.kelompok22.veterinarycareapp.LoginActivity;
 import com.kelompok22.veterinarycareapp.MainActivity;
 import com.kelompok22.veterinarycareapp.R;
+import com.kelompok22.veterinarycareapp.RegisterActivity;
+import com.kelompok22.veterinarycareapp.TentangKami;
 import com.kelompok22.veterinarycareapp.model.Keluhan;
+import com.kelompok22.veterinarycareapp.model.Login;
+import com.kelompok22.veterinarycareapp.model.LoginData;
 import com.kelompok22.veterinarycareapp.model.SessionManager;
 
 import org.jetbrains.annotations.NotNull;
@@ -40,17 +57,11 @@ public class AskFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private Button btnTanya, btnListTanya;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    EditText nama;
-    EditText email;
-    EditText isi;
-    EditText foto;
-    APIRequestData apiInterface;
-    private String token;
 
     public AskFragment() {
         // Required empty public constructor
@@ -86,14 +97,26 @@ public class AskFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        nama = view.findViewById(R.id.editTextName);
-        email = view.findViewById(R.id.editTextEmail);
-        isi = view.findViewById(R.id.editTextKeterangan);
-        foto = view.findViewById(R.id.editTextFoto);
-        SessionManager sessionManager = new SessionManager(getContext());
-        token = (String) sessionManager.getUserDetail().get(SessionManager.TOKEN);
-    }
 
+
+        btnTanya = view.findViewById(R.id.Tanya);
+        btnTanya.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), AskActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnListTanya = view.findViewById(R.id.ListTanya);
+        btnListTanya.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), AskActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -101,34 +124,5 @@ public class AskFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_ask, container, false);
     }
 
-    public void onClickKirim(View view) {
-        apiInterface = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Log.d("TAG", "onMasukClick: "+nama.getText());
-        Log.d("TAG", "onMasukClick: "+email.getText());
-        Log.d("TAG", "onMasukClick: "+isi.getText().toString());
-        Log.d("TAG", "onMasukClick: "+foto.getText().toString());
-        Call<Keluhan> KeluhanCall = apiInterface.keluhanResponse(nama.getText().toString(),email.getText().toString(),isi.getText().toString(), foto.getText().toString());
-        KeluhanCall.enqueue(new Callback<Keluhan>() {
-            @Override
-            public void onResponse(Call<Keluhan> call, Response<Keluhan> response) {
-                if(response.isSuccessful()){
-                    nama.setText(null);
-                    email.setText(null);
-                    isi.setText(null);
-                    foto.setText(null);
-                    Toast.makeText(getContext(), "Berhasil Terkirim", Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(getContext(), "Gagal", Toast.LENGTH_SHORT).show();
-                    Log.d("onResponse", "onResponse: " + response.message());
-                }
 
-            }
-
-            @Override
-            public void onFailure(Call<Keluhan> call, Throwable t) {
-                Toast.makeText(getContext(), "Gagal"+t.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.d("onFailure", "onFailure: " + t.getMessage());
-            }
-        });
-    }
 }

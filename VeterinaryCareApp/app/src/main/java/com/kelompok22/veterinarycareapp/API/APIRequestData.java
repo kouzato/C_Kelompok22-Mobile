@@ -1,7 +1,9 @@
 package com.kelompok22.veterinarycareapp.API;
 
 import com.kelompok22.veterinarycareapp.model.Keluhan;
+import com.kelompok22.veterinarycareapp.model.KeluhanResponse;
 import com.kelompok22.veterinarycareapp.model.ListDokter;
+import com.kelompok22.veterinarycareapp.model.ListKeluhanResponse;
 import com.kelompok22.veterinarycareapp.model.Login;
 import com.kelompok22.veterinarycareapp.model.Register;
 import com.kelompok22.veterinarycareapp.model.ResponseModel;
@@ -47,19 +49,20 @@ public interface APIRequestData {
     Call<ResponseModel> search(
             @Query("query") String query
     );
-    @Multipart
     @POST("profile3")
-    Call<Keluhan> keluhanResponse(
-
+    Call<KeluhanResponse> Keluhan(
             @Query("nama") String nama,
             @Query("email") String email,
             @Query("isi") String isi,
-            @Query("foto") String foto
-    );
+            @Query("foto") MultipartBody.Part foto);
+
 
     @GET("listdokter")
     Call<ListDokter> listdokter();
 
+    @GET("profile3")
+    Call<ListKeluhanResponse> ardListKeluhan(@Header("Authorization") String token);
 
 
+    Call<KeluhanResponse> Upload(String s, int parseInt, MultipartBody.Part partImage);
 }
