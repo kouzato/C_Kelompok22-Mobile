@@ -120,8 +120,8 @@ public class AskActivity extends AppCompatActivity {
                 Log.d("TAG", "onMasukClick: " + nama.getText().toString());
                 Log.d("TAG", "onMasukClick: " + email.getText().toString());
                 Log.d("TAG", "onMasukClick: " + isi.getText().toString());
-                Log.d("TAG", "onMasukClick: " + partImage.toString());
-                Call<KeluhanResponse> keluhanResponseCall = apiInterface.Keluhan(nama.getText().toString(), email.getText().toString(), isi.getText().toString(), partImage);
+                Log.d("TAG", "onMasukClick: " + imageFile.getName());
+                Call<KeluhanResponse> keluhanResponseCall = apiInterface.Keluhan("Bearer " + token,nama.getText().toString(), email.getText().toString(), isi.getText().toString(), partImage);
                 keluhanResponseCall.enqueue(new Callback<KeluhanResponse>() {
                     @Override
                     public void onResponse(Call<KeluhanResponse> call, Response<KeluhanResponse> response) {
